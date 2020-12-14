@@ -1,0 +1,15 @@
+
+plugin.tx_fsfzollerslidertext_zollerslidertext {
+    view {
+        # cat=plugin.tx_fsfzollerslidertext_zollerslidertext/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:fsf_zoller_slidertext/Resources/Private/Templates/
+        # cat=plugin.tx_fsfzollerslidertext_zollerslidertext/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:fsf_zoller_slidertext/Resources/Private/Partials/
+        # cat=plugin.tx_fsfzollerslidertext_zollerslidertext/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:fsf_zoller_slidertext/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_fsfzollerslidertext_zollerslidertext//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}
