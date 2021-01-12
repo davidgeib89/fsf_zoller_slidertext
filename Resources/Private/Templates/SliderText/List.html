@@ -1,36 +1,65 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<f:layout name="Default" />
+<div id="{rand}" class="container fsf-zoller-slidertext">
+    <div class="row">
+        <div class="col-12 col-xl-6">
+            <div  class="fsf-zoller-slidertext-container-left">
+                <f:for
+                each="{settings.references}"
+                as="reference"
+                key="key"
+                iteration="iterator"
+                >
+                <div class="slides-left">
+                    <f:if condition="{reference.item.img1}">                        
+                            <f:image
+                            class="slider-image-left"
+                            src="/uploads/tx_fsfzollerslidertext/{reference.item.img1}"
+                            />
+                            <h2>{reference.item.headline}</h2>
+                            <f:format.html>{reference.item.text}</f:format.html>
+                    </f:if>
+                </div>   
+                </f:for>
+            </div>
+        </div>
+        <div class="col-12 col-xl-6">
+            <div class="row">
+                <div class="col-12 order-xl-12">
+                    <div class="fsf-zoller-slidertext-container-right">
+                        <f:for
+                        each="{settings.references}"
+                        as="reference"
+                        key="key"
+                        iteration="iterator"
+                        >   
+                            <f:if condition="{reference.item.img2}">
+                                
+                                    <f:image
+                                    class="slider-image-right"
+                                    src="/uploads/tx_fsfzollerslidertext/{reference.item.img2}"
+                                    />
+                            
+                            </f:if>
+                        </f:for>
+                    </div>
+                </div>
+                <div class="col-12 order-xl-1">
+                    <h1>{settings.headline1}<f:if condition="{settings.headline2}"><br>{settings.headline2}</f:if></h1>
+                    <f:if condition="{settings.text}">                
+                            <f:format.html>{settings.text}</f:format.html>               
+                    </f:if>
+                    <f:if condition="{settings.buttontext}">
+                            <f:link.typolink
+                                parameter="{settings.url}"
+                                target="_blank"
+                            >
+                                <button class="btn btn-yellow">
+                                    {settings.buttontext}
+                                </button>
+                            </f:link.typolink>
+                        </f:if>
+                </div>
 
-This Template is responsible for creating a table of domain objects.
-
-If you modify this template, do not forget to change the overwrite settings
-in /Configuration/ExtensionBuilder/settings.yaml:
-  Resources:
-    Private:
-      Templates:
-        List.html: keep
-
-Otherwise your changes will be overwritten the next time you save the extension in the extension builder
-
-<f:section name="content">
-    <h1>Listing for SliderText</h1>
-
-    <f:flashMessages />
-
-    <table  class="tx_fsfzollerslidertext" >
-        <tr>
-            <th> </th>
-            <th> </th>
-        </tr>
-
-        <f:for each="{sliderTexts}" as="sliderText">
-            <tr>
-                <td><f:link.action action="edit" arguments="{sliderText : sliderText}">Edit</f:link.action></td>
-                <td><f:link.action action="delete" arguments="{sliderText : sliderText}">Delete</f:link.action></td>
-            </tr>
-        </f:for>
-    </table>
-
-    <f:link.action action="new">New SliderText</f:link.action>
-</f:section>
-</html>
+            </div>
+        </div>
+    </div>
+</div>

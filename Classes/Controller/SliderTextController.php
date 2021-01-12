@@ -42,5 +42,7 @@ class SliderTextController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
     {
         $sliderTexts = $this->sliderTextRepository->findAll();
         $this->view->assign('sliderTexts', $sliderTexts);
+        $this->view->assign('rand', md5(rand() + rand()));
+        $this->view->assign('randd', md5(rand() + rand()));
     }
 }

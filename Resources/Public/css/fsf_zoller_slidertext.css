@@ -1,0 +1,65 @@
+.fsf-zoller-slidertext {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 150px !important;
+}
+
+.fsf-zoller-slidertext .slider-image-right {
+    width: 100%;
+    height: auto;
+}
+
+.fsf-zoller-slidertext .slider-image-left {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.fsf-zoller-slidertext .slick-prev {
+    left: 15px;
+    width: 60px;
+    height: 60px;
+    top: 35%;
+}
+
+.fsf-zoller-slidertext .slick-next {
+    right: 15px;
+    width: 60px;
+    height: 60px;
+    top: 35%;
+}
+
+.fsf-zoller-slidertext .slick-prev:before {
+    content: url("/typo3conf/ext/bootstrap_package/Resources/Public/Icons/black/arrow2-left.svg");
+}
+
+.fsf-zoller-slidertext .slick-next:before {
+    content: url("/typo3conf/ext/bootstrap_package/Resources/Public/Icons/black/arrow2-right.svg");
+}
+
+@media (max-width: 1200px) {
+    .fsf-zoller-slidertext {
+        margin-bottom: 30px !important;
+    }
+
+    .fsf-zoller-slidertext .col-12.order-xl-1 {
+        margin-top: 2rem;
+    }
+    .fsf-zoller-slidertext .slick-next {
+        right: 0px;
+        width: 40px;
+        height: 40px;
+		top: 35%;
+		z-index: 9999;
+	}
+	
+	.fsf-zoller-slidertext .slick-prev {
+		left: 0px;
+		width: 40px;
+		height: 40px;
+		top: 35%;
+		z-index: 9999;
+	}
+}

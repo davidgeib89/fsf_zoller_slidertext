@@ -11,39 +11,73 @@
                 </TCEforms>
                 <type>array</type>
                 <el>
-                    <settings.headline>
+                    <settings.type>
+						<TCEforms>
+							<label>Anzahl Spalten</label>
+							<onChange>reload</onChange>
+							<config>
+								<type>select</type>
+								<renderType>selectSingle</renderType>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">Bild links, Text rechts</numIndex>
+										<numIndex index="1">two</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">Bild rechts, Text links</numIndex>
+										<numIndex index="1">three</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</settings.type>
+                    <settings.headline1>
                         <TCEforms>
-                            <label>Überschrift</label>
+                            <label>Überschrift Zeile 1</label>
                             <config>
                                 <type>input</type>
                                 <eval>trim</eval>
                                 <size>30</size>
                             </config>
                         </TCEforms>
-                    </settings.headline>
-                    <settings.text>
-                    <TCEforms>
-                            <label>Unterüberschrift</label>
+                    </settings.headline1>
+                    <settings.headline2>
+                        <TCEforms>
+                            <label>Überschrift Zeile 2</label>
                             <config>
                                 <type>input</type>
                                 <eval>trim</eval>
-                                <size>230</size>
+                                <size>30</size>
+                            </config>
+                        </TCEforms>
+                    </settings.headline2>
+                    <settings.text>
+                        <TCEforms>
+                            <label>Text</label>
+                            <config>
+                                <type>text</type>
+                                <rows>5</rows>
+                                <cols>30</cols>
+                                <eval>trim</eval>
+                                <max>100</max>
+                                <enableRichtext>1</enableRichtext>
+                                <richtextConfiguration>default</richtextConfiguration>
                             </config>
                         </TCEforms>
                     </settings.text>
-                    <settings.buttontext1>
+                    <settings.buttontext>
                         <TCEforms>
-                            <label>Buttontext</label>
+                            <label>Buttontext</label>                            
                             <config>
                                 <type>input</type>
                                 <eval>trim</eval>
                                 <size>30</size>
                             </config>
                         </TCEforms>
-                    </settings.buttontext1>
-                    <settings.url1>
+                    </settings.buttontext>
+                    <settings.url>
                         <TCEforms>
-                            <label>Buttonlink</label>
+                            <label>Buttonlink</label>                            
                             <config>
                                 <type>input</type>
                                 <size>50</size>
@@ -53,37 +87,73 @@
                                 <softref>typolink</softref>
                             </config>
                         </TCEforms>
-                    </settings.url1>
-                    <settings.img1>
-						<TCEforms>
-							<label>Hintergrund Bild</label>
-							<config>										
-								<type>group</type>
-								<internal_type>file</internal_type>
-								<allowed>gif, jpg,jpeg,png,csv</allowed>
-								<max_size>10000</max_size>
-								<uploadfolder>uploads/tx_fsfzollerheader</uploadfolder>
-								<maxitems>1</maxitems>
-								<size>1</size>
-								<selectedliststyle>Width:180px</selectedliststyle>
-							</config>
-						</TCEforms>
-					</settings.img1>
-                    <settings.video>
-							<TCEforms>
-								<label>Video/Animation</label>
-								<config>
-									<type>group</type>
-									<internal_type>file</internal_type>
-									<allowed>mp4</allowed>
-									<max_size>10000</max_size>
-									<uploadfolder>uploads/tx_fsfzollerheader</uploadfolder>
-									<maxitems>1</maxitems>
-									<size>1</size>
-									<selectedliststyle>Width:180px</selectedliststyle>
-								</config>
-							</TCEforms>
-						</settings.video>
+                    </settings.url>
+                    <settings.references>
+                        <section>1</section>
+                        <type>array</type>
+                        <el>
+                            <item>
+                                <type>array</type>
+                                <title>LLL:EXT:fsf_slider/Resources/Private/Language/locallang.xlf:flexform.slide.title</title>
+                                <el>
+                                    <headline>
+                                        <TCEforms>
+                                            <label>Überschrift</label>
+                                            <config>
+                                                <type>input</type>
+                                                <eval>trim</eval>
+                                                <size>30</size>
+                                            </config>
+                                        </TCEforms>
+                                    </headline>
+                                    <text>
+                                        <TCEforms>
+                                            <label>Text</label>
+                                            <config>
+                                                <type>text</type>
+                                                <rows>5</rows>
+                                                <cols>30</cols>
+                                                <eval>trim</eval>
+                                                <max>100</max>
+                                                <enableRichtext>1</enableRichtext>
+                                                <richtextConfiguration>default</richtextConfiguration>
+                                            </config>
+                                        </TCEforms>
+                                    </text>
+                                    <img1>
+                                        <TCEforms>
+                                            <label>Bild Slider</label>
+                                            <config>										
+                                                <type>group</type>
+                                                <internal_type>file</internal_type>
+                                                <allowed>gif, jpg,jpeg,png,csv</allowed>
+                                                <max_size>10000</max_size>
+                                                <uploadfolder>uploads/tx_fsfzollerslidertext</uploadfolder>
+                                                <maxitems>1</maxitems>
+                                                <size>1</size>
+                                                <selectedliststyle>Width:180px</selectedliststyle>
+                                            </config>
+                                        </TCEforms>
+                                    </img1>
+                                    <img2>
+                                        <TCEforms>
+                                            <label>Bild unter Text</label>
+                                            <config>										
+                                                <type>group</type>
+                                                <internal_type>file</internal_type>
+                                                <allowed>gif, jpg,jpeg,png,csv</allowed>
+                                                <max_size>10000</max_size>
+                                                <uploadfolder>uploads/tx_fsfzollerslidertext</uploadfolder>
+                                                <maxitems>1</maxitems>
+                                                <size>1</size>
+                                                <selectedliststyle>Width:180px</selectedliststyle>
+                                            </config>
+                                        </TCEforms>
+                                    </img2>
+                                </el>
+                            </item>
+                        </el>
+                    </settings.references>
                 </el>
             </ROOT>
         </sheet1>
