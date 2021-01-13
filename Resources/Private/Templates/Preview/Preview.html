@@ -1,16 +1,22 @@
-<h1>Zoller Slider Text</h1>
-<h2>{pi_flexform_transformed.settings.headline1}</h2>
-<h2>{pi_flexform_transformed.settings.headline2}</h2>
+<h1>
+    Zoller Slider Text
+    <f:if condition="{pi_flexform_transformed.settings.type} == 'left'">
+        (Bild links)
+    </f:if>
+    <f:if condition="{pi_flexform_transformed.settings.type} == 'right'">
+        (Bild rechts)
+    </f:if>
+</h1>
+
+<h2>{pi_flexform_transformed.settings.headline1}<br>{pi_flexform_transformed.settings.headline2}</h2>
 <f:for
-                        each="{pi_flexform_transformed.settings.references}"
-                        as="reference"
-                        key="key"
-                        iteration="iterator"
-						> 
-						<f:if condition="{iterator.index} == '0'">
-							<f:image
-                                    
-                                    src="/uploads/tx_fsfzollerslidertext/{reference.item.img2}"
-                                    /> 
-						</f:if>						
-					</f:for>
+    each="{pi_flexform_transformed.settings.references}"
+    as="reference"
+    key="key"
+    iteration="iterator"
+>
+    <f:if condition="{iterator.index} == '0'">
+        <f:image src="/uploads/tx_fsfzollerslidertext/{reference.item.img1}" width="150" height="150" />
+    </f:if>
+</f:for>
+

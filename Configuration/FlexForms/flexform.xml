@@ -21,11 +21,11 @@
 								<items type="array">
 									<numIndex index="0" type="array">
 										<numIndex index="0">Bild links, Text rechts</numIndex>
-										<numIndex index="1">two</numIndex>
+										<numIndex index="1">left</numIndex>
 									</numIndex>
 									<numIndex index="1" type="array">
 										<numIndex index="0">Bild rechts, Text links</numIndex>
-										<numIndex index="1">three</numIndex>
+										<numIndex index="1">right</numIndex>
 									</numIndex>
 								</items>
 							</config>

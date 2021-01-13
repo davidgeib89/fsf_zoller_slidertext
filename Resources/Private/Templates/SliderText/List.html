@@ -1,65 +1,130 @@
 <div id="{rand}" class="container fsf-zoller-slidertext">
     <div class="row">
-        <div class="col-12 col-xl-6">
-            <div  class="fsf-zoller-slidertext-container-left">
-                <f:for
-                each="{settings.references}"
-                as="reference"
-                key="key"
-                iteration="iterator"
-                >
-                <div class="slides-left">
-                    <f:if condition="{reference.item.img1}">                        
-                            <f:image
-                            class="slider-image-left"
-                            src="/uploads/tx_fsfzollerslidertext/{reference.item.img1}"
-                            />
-                            <h2>{reference.item.headline}</h2>
-                            <f:format.html>{reference.item.text}</f:format.html>
-                    </f:if>
-                </div>   
-                </f:for>
-            </div>
-        </div>
-        <div class="col-12 col-xl-6">
-            <div class="row">
-                <div class="col-12 order-xl-12">
-                    <div class="fsf-zoller-slidertext-container-right">
-                        <f:for
-                        each="{settings.references}"
-                        as="reference"
-                        key="key"
-                        iteration="iterator"
-                        >   
-                            <f:if condition="{reference.item.img2}">
-                                
-                                    <f:image
-                                    class="slider-image-right"
-                                    src="/uploads/tx_fsfzollerslidertext/{reference.item.img2}"
-                                    />
-                            
-                            </f:if>
-                        </f:for>
-                    </div>
-                </div>
-                <div class="col-12 order-xl-1">
-                    <h1>{settings.headline1}<f:if condition="{settings.headline2}"><br>{settings.headline2}</f:if></h1>
-                    <f:if condition="{settings.text}">                
-                            <f:format.html>{settings.text}</f:format.html>               
-                    </f:if>
-                    <f:if condition="{settings.buttontext}">
-                            <f:link.typolink
-                                parameter="{settings.url}"
-                                target="_blank"
-                            >
-                                <button class="btn btn-yellow">
-                                    {settings.buttontext}
-                                </button>
-                            </f:link.typolink>
+        <f:if condition="{settings.type} == 'left'">
+            <div class="col-12 col-xl-6">
+                <div  class="fsf-zoller-slidertext-container-left">
+                    <f:for
+                    each="{settings.references}"
+                    as="reference"
+                    key="key"
+                    iteration="iterator"
+                    >
+                    <div class="slides-left">
+                        <f:if condition="{reference.item.img1}">                        
+                                <f:image
+                                class="slider-image-left"
+                                src="/uploads/tx_fsfzollerslidertext/{reference.item.img1}"
+                                />
+                                <h2>{reference.item.headline}</h2>
+                                <f:format.html>{reference.item.text}</f:format.html>
                         </f:if>
+                    </div>   
+                    </f:for>
                 </div>
-
             </div>
-        </div>
+            <div class="col-12 col-xl-6">
+                <div class="row">
+                    <div class="col-12 order-xl-12">
+                        <div class="fsf-zoller-slidertext-container-right">
+                            <f:for
+                            each="{settings.references}"
+                            as="reference"
+                            key="key"
+                            iteration="iterator"
+                            >   
+                                <f:if condition="{reference.item.img2}">
+                                    
+                                        <f:image
+                                        class="slider-image-right"
+                                        src="/uploads/tx_fsfzollerslidertext/{reference.item.img2}"
+                                        />
+                                
+                                </f:if>
+                            </f:for>
+                        </div>
+                    </div>
+                    <div class="col-12 order-xl-1">
+                        <h1>{settings.headline1}<f:if condition="{settings.headline2}"><br>{settings.headline2}</f:if></h1>
+                        <f:if condition="{settings.text}">                
+                                <f:format.html>{settings.text}</f:format.html>               
+                        </f:if>
+                        <f:if condition="{settings.buttontext}">
+                                <f:link.typolink
+                                    parameter="{settings.url}"
+                                    target="_blank"
+                                >
+                                    <button class="btn btn-yellow">
+                                        {settings.buttontext}
+                                    </button>
+                                </f:link.typolink>
+                            </f:if>
+                    </div>
+    
+                </div>
+            </div>
+        </f:if>
+        <f:if condition="{settings.type} == 'right'">
+            <div class="col-12 col-xl-6">
+                <div class="row">
+                    <div class="col-12 order-xl-12">
+                        <div class="fsf-zoller-slidertext-container-right">
+                            <f:for
+                            each="{settings.references}"
+                            as="reference"
+                            key="key"
+                            iteration="iterator"
+                            >   
+                                <f:if condition="{reference.item.img2}">
+                                    
+                                        <f:image
+                                        class="slider-image-right"
+                                        src="/uploads/tx_fsfzollerslidertext/{reference.item.img2}"
+                                        />
+                                
+                                </f:if>
+                            </f:for>
+                        </div>
+                    </div>
+                    <div class="col-12 order-xl-1">
+                        <h1>{settings.headline1}<f:if condition="{settings.headline2}"><br>{settings.headline2}</f:if></h1>
+                        <f:if condition="{settings.text}">                
+                                <f:format.html>{settings.text}</f:format.html>               
+                        </f:if>
+                        <f:if condition="{settings.buttontext}">
+                                <f:link.typolink
+                                    parameter="{settings.url}"
+                                    target="_blank"
+                                >
+                                    <button class="btn btn-yellow">
+                                        {settings.buttontext}
+                                    </button>
+                                </f:link.typolink>
+                            </f:if>
+                    </div>
+    
+                </div>
+            </div>
+            <div class="col-12 col-xl-6">
+                <div  class="fsf-zoller-slidertext-container-left">
+                    <f:for
+                    each="{settings.references}"
+                    as="reference"
+                    key="key"
+                    iteration="iterator"
+                    >
+                    <div class="slides-left">
+                        <f:if condition="{reference.item.img1}">                        
+                                <f:image
+                                class="slider-image-left"
+                                src="/uploads/tx_fsfzollerslidertext/{reference.item.img1}"
+                                />
+                                <h2>{reference.item.headline}</h2>
+                                <f:format.html>{reference.item.text}</f:format.html>
+                        </f:if>
+                    </div>   
+                    </f:for>
+                </div>
+            </div>
+        </f:if>
     </div>
 </div>
