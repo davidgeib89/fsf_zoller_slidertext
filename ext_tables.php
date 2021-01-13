@@ -3,8 +3,8 @@ defined('TYPO3_MODE') || die('Access denied.');
 
 call_user_func(
     function()
-    {
-
+    {   
+        //$GLOBALS['TBE_STYLES']['skins']['fsf_zoller_slidertext']['stylesheetDirectories'][] = 'EXT:fsf_zoller_slidertext\Resources\Public\backend_css\backend-preview.css';
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
             'FREESIXTYFIVE.FsfZollerSlidertext',
             'Zollerslidertext',

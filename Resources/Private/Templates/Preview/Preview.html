@@ -1,0 +1,16 @@
+<h1>Zoller Slider Text</h1>
+<h2>{pi_flexform_transformed.settings.headline1}</h2>
+<h2>{pi_flexform_transformed.settings.headline2}</h2>
+<f:for
+                        each="{pi_flexform_transformed.settings.references}"
+                        as="reference"
+                        key="key"
+                        iteration="iterator"
+						> 
+						<f:if condition="{iterator.index} == '0'">
+							<f:image
+                                    
+                                    src="/uploads/tx_fsfzollerslidertext/{reference.item.img2}"
+                                    /> 
+						</f:if>						
+					</f:for>
