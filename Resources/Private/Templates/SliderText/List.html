@@ -15,7 +15,7 @@
                                 class="slider-image-left"
                                 src="/uploads/tx_fsfzollerslidertext/{reference.item.img1}"
                                 />
-                                <h2>{reference.item.headline}</h2>
+                                <h2 class="headline">{reference.item.headline}</h2>
                                 <f:format.html>{reference.item.text}</f:format.html>
                         </f:if>
                     </div>   
@@ -44,7 +44,7 @@
                         </div>
                     </div>
                     <div class="col-12 order-xl-1">
-                        <h1>{settings.headline1}<f:if condition="{settings.headline2}"><br>{settings.headline2}</f:if></h1>
+                        <h2 class="headline">{settings.headline1}<f:if condition="{settings.headline2}"><br>{settings.headline2}</f:if></h2>
                         <f:if condition="{settings.text}">                
                                 <f:format.html>{settings.text}</f:format.html>               
                         </f:if>
@@ -86,7 +86,7 @@
                         </div>
                     </div>
                     <div class="col-12 order-xl-1">
-                        <h1>{settings.headline1}<f:if condition="{settings.headline2}"><br>{settings.headline2}</f:if></h1>
+                        <h2>{settings.headline1}<f:if condition="{settings.headline2}"><br>{settings.headline2}</f:if></h2>
                         <f:if condition="{settings.text}">                
                                 <f:format.html>{settings.text}</f:format.html>               
                         </f:if>

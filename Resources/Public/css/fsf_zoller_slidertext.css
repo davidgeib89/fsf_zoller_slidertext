@@ -16,6 +16,10 @@
     margin: 0 auto;
     margin-bottom: 20px;
 }
+.fsf-zoller-slidertext .headline {
+    font-size: 3rem;
+}
+
 
 .fsf-zoller-slidertext .slick-prev {
     left: 15px;
@@ -42,6 +46,10 @@
 @media (max-width: 1200px) {
     .fsf-zoller-slidertext {
         margin-bottom: 30px !important;
+    }
+
+    .fsf-zoller-slidertext .headline {
+        font-size: 2rem;
     }
 
     .fsf-zoller-slidertext .col-12.order-xl-1 {
