@@ -26,6 +26,7 @@
     width: 60px;
     height: 60px;
     top: 35%;
+    z-index: 99;
 }
 
 .fsf-zoller-slidertext .slick-next {
@@ -33,6 +34,7 @@
     width: 60px;
     height: 60px;
     top: 35%;
+    z-index: 99;
 }
 
 .fsf-zoller-slidertext .slick-prev:before {
