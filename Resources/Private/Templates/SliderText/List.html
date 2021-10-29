@@ -1,4 +1,15 @@
-<div id="{rand}" class="container fsf-zoller-slidertext">
+<div class="fsf-zoller-slidertext-wrapper {f:if(condition:
+        '{settings.border}',
+        then:
+        'withborder')} 
+        {f:if(condition:
+        '{settings.border-color}
+        ==
+        \'yellow\'',
+        then:
+        'yellow-border')}
+        ">
+<div id="{rand}" class="container fsf-zoller-slidertext ">
     <div class="row">
         <f:if condition="{settings.type} == 'left'">
             <div class="col-12 col-xl-6">
@@ -20,6 +31,16 @@
                         </f:if>
                     </div>   
                     </f:for>
+                </div>
+                <div class="mask-container">
+                    <f:if condition="{settings.mask}">
+                        <f:if condition="{settings.maskimage}">                       
+                            <f:image
+                            class="slider-mask"
+                            src="/uploads/tx_fsfzollerslidertext/{settings.maskimage}"
+                            />
+                        </f:if>  
+                    </f:if>
                 </div>
             </div>
             <div class="col-12 col-xl-6">
@@ -124,7 +145,18 @@
                     </div>   
                     </f:for>
                 </div>
+                <div class="mask-container">
+                    <f:if condition="{settings.mask}">
+                        <f:if condition="{settings.maskimage}">                       
+                            <f:image
+                            class="slider-mask"
+                            src="/uploads/tx_fsfzollerslidertext/{settings.maskimage}"
+                            />
+                        </f:if>  
+                    </f:if>
+                </div>
             </div>
         </f:if>
     </div>
+</div>
 </div>

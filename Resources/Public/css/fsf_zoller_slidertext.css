@@ -1,7 +1,22 @@
 .fsf-zoller-slidertext {
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+.fsf-zoller-slidertext-wrapper {
+    min-height: 100vh;
     margin-bottom: 150px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fsf-zoller-slidertext-wrapper.withborder {
+    border: 50px solid #dadada;
+}
+
+.fsf-zoller-slidertext-wrapper.withborder.yellow-border {
+    border: 50px solid #f0e600;
 }
 
 .fsf-zoller-slidertext .slider-image-right {
@@ -20,7 +35,6 @@
     font-size: 3rem;
 }
 
-
 .fsf-zoller-slidertext .slick-prev {
     left: 15px;
     width: 60px;
@@ -38,11 +52,11 @@
 }
 
 .fsf-zoller-slidertext .slick-prev:before {
-    content: url("/typo3conf/ext/bootstrap_package/Resources/Public/Icons/black/arrow2-left.svg");
+    content: url("/typo3conf/ext/bootstrap_package/Resources/Public/Icons/black/arrow_left.png");
 }
 
 .fsf-zoller-slidertext .slick-next:before {
-    content: url("/typo3conf/ext/bootstrap_package/Resources/Public/Icons/black/arrow2-right.svg");
+    content: url("/typo3conf/ext/bootstrap_package/Resources/Public/Icons/black/arrow_right.png");
 }
 
 @media (max-width: 1200px) {
@@ -61,15 +75,39 @@
         right: 0px;
         width: 40px;
         height: 40px;
-		top: 35%;
-		z-index: 9999;
-	}
-	
-	.fsf-zoller-slidertext .slick-prev {
-		left: 0px;
-		width: 40px;
-		height: 40px;
-		top: 35%;
-		z-index: 9999;
-	}
+        top: 35%;
+        z-index: 9999;
+    }
+
+    .fsf-zoller-slidertext .slick-prev {
+        left: 0px;
+        width: 40px;
+        height: 40px;
+        top: 35%;
+        z-index: 9999;
+    }
+
+    .fsf-zoller-slidertext-wrapper.withborder {
+        border: 17px solid #dadada;
+    }
+
+    .fsf-zoller-slidertext-wrapper.withborder.yellow-border {
+        border: 17px solid #f0e600;
+    }
+}
+
+.image-container {
+    position: relative;
+}
+
+.slider-mask {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
 }

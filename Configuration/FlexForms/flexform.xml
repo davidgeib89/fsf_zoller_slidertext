@@ -31,6 +31,57 @@
 							</config>
 						</TCEforms>
 					</settings.type>
+                    <settings.border>
+                        <TCEforms>
+                            <label>Rahmen anzeigen</label>
+                            <config>
+                            <type>check</type>
+                            </config>
+                        </TCEforms>
+                    </settings.border>
+                    <settings.border-color>
+						<TCEforms>
+							<label>Rahmen Farbe</label>
+							<onChange>reload</onChange>
+							<config>
+								<type>select</type>
+								<renderType>selectSingle</renderType>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">Grau</numIndex>
+										<numIndex index="1">grey</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">Gelb</numIndex>
+										<numIndex index="1">yellow</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</settings.border-color>
+                    <settings.mask>
+                        <TCEforms>
+                            <label>Maske anzeigen</label>
+                            <config>
+                            <type>check</type>
+                            </config>
+                        </TCEforms>
+                    </settings.mask>
+                    <settings.maskimage>
+                        <TCEforms>
+                            <label>Maske Bild</label>
+                            <config>										
+                                <type>group</type>
+                                <internal_type>file</internal_type>
+                                <allowed>gif, jpg,jpeg,png,csv</allowed>
+                                <max_size>10000</max_size>
+                                <uploadfolder>uploads/tx_fsfzollerslidertext</uploadfolder>
+                                <maxitems>1</maxitems>
+                                <size>1</size>
+                                <selectedliststyle>Width:180px</selectedliststyle>
+                            </config>
+                        </TCEforms>
+                    </settings.maskimage>
                     <settings.headline1>
                         <TCEforms>
                             <label>Überschrift Zeile 1</label>
